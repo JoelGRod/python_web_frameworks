@@ -10,7 +10,7 @@ from context.todo.main.controllers import read, create, update, delete
 
 todos_bp = Blueprint("todos_bp", __name__)
 
-todos_bp.route("/home", methods=["GET"])(read.render_all_todos)
+todos_bp.route("/", methods=["GET"])(read.render_all_todos)
 todos_bp.route("/add", methods=["POST"])(create.create_todo)
 todos_bp.route("/update/<int:todo_id>", methods=["GET"])(update.update_todo)
 todos_bp.route("/delete/<int:todo_id>", methods=["GET"])(delete.delete_todo)
