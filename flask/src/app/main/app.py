@@ -14,7 +14,7 @@ def create_app():
     app.register_blueprint(todo_router)
     app.register_blueprint(domain_router)
 
+    with app.app_context():
+        db.create_all()
+
     return app
-
-
-

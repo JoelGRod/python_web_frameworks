@@ -1,7 +1,7 @@
 from flask import Blueprint
 from context.todo.main.controllers import read, create, update, delete
 
-todo_router = Blueprint("todos_bp", __name__)
+todo_router = Blueprint("todo_router", __name__)
 
 # Read
 todo_router.route("/", methods=["GET"])(read.render_all_todos)
