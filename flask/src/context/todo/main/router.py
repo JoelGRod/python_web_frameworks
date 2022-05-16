@@ -1,5 +1,10 @@
 from flask import Blueprint
-from context.todo.main.controllers import read, create, update, delete
+from context.todo.main.controllers import (
+    read_controller as read, 
+    create_controller as create, 
+    update_controller as update, 
+    delete_controller as delete
+)
 
 todo_router = Blueprint("todo_router", __name__)
 
